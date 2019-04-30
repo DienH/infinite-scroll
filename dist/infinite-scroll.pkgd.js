@@ -1518,7 +1518,7 @@ proto.getElementScrollY = function( elem ) {
 };
 
 proto.getElementWindowScrollY = function( elem ) {
-  var rect = elem.getBoundingClientRect();
+  var rect = (elem) ? elem.getBoundingClientRect() : {top:0};
   return rect.top + window.pageYOffset;
 };
 
