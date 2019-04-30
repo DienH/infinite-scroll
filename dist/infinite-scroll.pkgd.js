@@ -655,6 +655,7 @@ proto.create = function() {
   this.updateGetPath();
   // bail if getPath not set, or returns falsey #776
   var hasPath = this.getPath && this.getPath();
+  console.log(hasPath, this.getPath)
   if ( !hasPath ) {
     console.error('Disabling InfiniteScroll');
     return;
